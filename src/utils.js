@@ -1,4 +1,3 @@
-// utils.js
 export const moveButton = () => {
     const noButton = document.getElementById('noButton');
     const x = Math.random() * (window.innerWidth - noButton.offsetWidth) - 85;
