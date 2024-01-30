@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter } from 'react-router-dom';
+import YesPage from './yes';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+    <Switch>
+      <Route exact path="/ask-her-out" component={App} />
+      <Route path="/yes" component={YesPage} />
+    </Switch>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
